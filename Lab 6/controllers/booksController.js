@@ -33,13 +33,12 @@ module.exports = {
     if (redirectPath) res.redirect(redirectPath);
     else next();
   },
-  updateBook: (req, res, next) => {
+  update: (req, res, next) => {
     let params_book_id = req.params.id;
     Books.findByIdAndUpdate(params_book_id, 
       {
-        title: req.body.title,
+        name: req.body.title,
         author: req.body.author,
-        publisher: req.body.publisher
       }, (error, book) => {
         if (error) next(error);
         req.data = book;
@@ -47,7 +46,7 @@ module.exports = {
         next();
     });
   },
-  deleteBook: (req, res, next) => {
+  delete: (req, res, next) => {
     let params_book_id = req.params.id;
     Books.findByIdAndRemove({_id: params_book_id}, (error, book) => {
       if (error) next(error);
