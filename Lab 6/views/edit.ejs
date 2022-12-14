@@ -1,11 +1,11 @@
-<div class="book-body" style="height: 75vh;">
+<div class="book">
     <table>
         <tr>
             <td style="width: 25%;">
                 <img src="../public/images/<%- book.picture %>" width="315px" height="400px"/>
             </td>
             <td style="width: 55%;">
-                <form action="/books/<%- info.id %>/update" method="POST">
+                <form action="/books/<%- Books.id %>/update" method="POST">
                     <h2>Title: </h2>
                     <input type="text"
                     name="title"
