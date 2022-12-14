@@ -1,0 +1,13 @@
+<% Books.forEach(Books => 
+    { %>
+        <div class="body">
+            <table>
+                <tr>
+                    <td style="width: 25%;"><a href="./books/<%- Books.id %>"><img src="../public/images/<%- Books.picture %>" style="max-width: 75%; max-height: 75%;"></a></td>
+                    <td style="width: 75%;"><a href="./books/<%- Books.id %>"><h2><%- Books.name %></h2></a></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+    <% });  
+%>

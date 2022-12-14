@@ -1,0 +1,29 @@
+<div class="book-body" style="height: 75vh;">
+    <table>
+        <tr>
+            <td style="width: 25%;">
+                <img src="../public/images/<%- book.picture %>" width="315px" height="400px"/>
+            </td>
+            <td style="width: 55%;">
+                <form action="/books/<%- info.id %>/update" method="POST">
+                    <h2>Title: </h2>
+                    <input type="text"
+                    name="title"
+                    required="required"
+                    placeholder="<%- book.name %>" />
+
+                    <p><h3>Summary: </h3></p>
+                    <p><%- book.summary %></p>
+            
+                    <p>Author: </p>
+                    <input type="text"
+                    name="author"
+                    required="required"
+                    placeholder="<%- book.author %>"/>
+            
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
